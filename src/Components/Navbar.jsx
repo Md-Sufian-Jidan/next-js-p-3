@@ -12,28 +12,8 @@ const Navbar = () => {
             path: "/"
         },
         {
-            title: "About",
-            path: "/about"
-        },
-        {
-            title: "Blogs",
-            path: "/blogs"
-        },
-        {
-            title: "Categories",
-            path: "/categories"
-        },
-        {
-            title: "Services",
-            path: "/services"
-        },
-        {
-            title: "Contacts",
-            path: "/contact"
-        },
-        {
-            title: "Dashboard",
-            path: "/dashboard"
+            title: "Post",
+            path: "/posts"
         },
     ];
     const handler = () => {
@@ -55,12 +35,12 @@ const Navbar = () => {
     }
     return (
         <div>
-            <nav className="md:flex items-center justify-evenly bg-red-500 p-5 md:space-y-0 space-y-5 text-center">
-                <h4 className='text-3xl'>Next<span className='text-slate-300'>Hero</span></h4>
+            <nav className="md:flex items-center justify-evenly bg-orange-300/50 p-5 md:space-y-0 space-y-5 text-center">
+                <h4 className='text-3xl'>Next<span className='text-pink-600'>Hero</span></h4>
                 <ul className='flex justify-between items-center space-x-3'>
                     {
                         navLinks?.map(((link, idx) => <>
-                            <li key={idx} className={`${pathName === link?.path && 'text-blue-700'}`}>
+                            <li key={idx} className={`${pathName === link?.path && 'text-pink-300'}`}>
                                 <Link href={link?.path}>{link?.title}</Link>
                             </li>
                         </>)
@@ -70,7 +50,7 @@ const Navbar = () => {
                     <li><a href='/contact'>Contact</a></li> */}
                     {/* next js link tag */}
                 </ul>
-                <button onClick={() => handler()} className='p-3 bg-purple-200 text-pink-700 rounded-3xl'>Login</button>
+                <button onClick={() => handler()} className='p-3 bg-indigo-300/80 text-green-700 font-bold rounded-3xl'>Login</button>
             </nav>
         </div>
     );
