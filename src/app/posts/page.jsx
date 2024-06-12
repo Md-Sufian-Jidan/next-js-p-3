@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const PostsPage = async () => {
     const postData = await getPosts();
-    console.log(postData);
     return (
         <div>
             <h5>All Posts</h5>

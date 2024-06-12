@@ -6,9 +6,18 @@ const PostDetailsData = async (id) => {
     return data;
 };
 
+export const generateMetadata = async ({ params }) => {
+    const postData = await fetch(`https://jsonplaceholder.typicode.com/posts/${params?.id}`)
+    const data = await postData?.json();
+    return {
+        title: `Post Details ${data?.title}`,
+        description: `${data?.body}`,
+        keywords : data?.body?.split(' ')
+    };
+};
+
 const PostDetailsPage = async ({ params }) => {
     const singlePostData = await PostDetailsData(params?.id);
-    // console.log(singlePostData);
     return (
         <div>
             <div className='p-10 space-y-5'>
