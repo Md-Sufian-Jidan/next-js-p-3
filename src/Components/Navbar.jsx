@@ -19,6 +19,10 @@ const Navbar = () => {
             title: "Meals",
             path: "/meals"
         },
+        {
+            title: "About",
+            path: "/about"
+        },
     ];
     const handler = () => {
         router.push('/login');
@@ -28,7 +32,7 @@ const Navbar = () => {
             <div>
                 {/* navbar */}
                 <div className='flex justify-between items-center bg-indigo-700/40 p-5 mx-20 mb-2 rounded-2xl'>
-                    <h2>Next Meal</h2>
+                    <h2>Next Hero</h2>
                     <ul className='flex justify-between space-x-2'>
                         <li>Home</li>
                         <li>Profile</li>
