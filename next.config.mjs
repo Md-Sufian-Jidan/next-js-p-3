@@ -4,7 +4,8 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "www.themealdb.com",
+                // hostname: ["www.themealdb.com", "www.unsplash.com"],
+                hostname: "*",
                 port: "",
                 pathname: "/**"
             }

@@ -10,9 +10,11 @@ export const generateMetadata = async ({ params }) => {
     const postData = await fetch(`https://jsonplaceholder.typicode.com/posts/${params?.id}`)
     const data = await postData?.json();
     return {
-        title: `Post Details ${data?.title}`,
+        title: {
+            absolute: `${data?.title}`
+        },
         description: `${data?.body}`,
-        keywords : data?.body?.split(' ')
+        keywords: data?.body?.split(' ')
     };
 };
 
