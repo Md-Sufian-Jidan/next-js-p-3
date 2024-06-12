@@ -15,6 +15,10 @@ const Navbar = () => {
             title: "Post",
             path: "/posts"
         },
+        {
+            title: "Meals",
+            path: "/meals"
+        },
     ];
     const handler = () => {
         router.push('/login');
