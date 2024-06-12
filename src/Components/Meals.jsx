@@ -46,7 +46,7 @@ const Meals = () => {
                                         <span className="text-sm font-light text-gray-600 dark:text-gray-400">Meal Id : {meal?.idCategory}</span>
                                         <a className="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500" tabindex="0" role="button">Category : {meal?.strCategory}</a>
                                     </div>
-                                    <div>
+                                    <div className='my-1 shadow-2xl rounded-xl'>
                                         <Image src={meal?.strCategoryThumb} width={300} height={300} alt="meal page" />
                                     </div>
                                     <div className="mt-2">
