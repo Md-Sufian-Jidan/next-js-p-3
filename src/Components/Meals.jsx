@@ -11,7 +11,6 @@ const Meals = () => {
         try {
             const res = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php?f=${search}`);
             const data = await res.json();
-            console.log('11', data);
             setMeals(data?.categories);
         } catch (err) {
             console.log(err);
